@@ -11,10 +11,10 @@
             <ul class="navbar-nav">
                 @if (Auth::check())
                     <li class="nav-item"><a href="#" class="nav-link">NewTask</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+                    <li class="nav-item">{!! link_to_route("logout.get", "Logout") !!}</li>
                 @else
-                    <li>{!! link_to_route("signup.get", "Signup", [], ["class" => "nav-link"]) !!}</li>
-                    <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                    <li class="nav-item">{!! link_to_route("signup.get", "Signup", [], ["class" => "nav-link"]) !!}</li>
+                    <li class="nav-item">{!! link_to_route("login", "Login", [], ["class" => "nav-link"]) !!}</li>
                 @endif
             </ul>
         </div>
